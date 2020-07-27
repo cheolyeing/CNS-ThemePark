@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Midnight_ThemePark</string>
+    <string name="id">ID</string>
+    <string name="pw">PW</string>
+    <string name="imgErr">Cannot Find Image!</string>
+    <string name="login">LOGIN</string>
+</resources>
