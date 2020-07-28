@@ -1,5 +1,6 @@
 package com.example.midnight_themepark
 
+import android.content.Intent
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -17,42 +18,6 @@ class MainActivity : AppCompatActivity() {
         var iv: ImageView = findViewById(R.id.mainImg)
         iv.setColorFilter(Color.argb(255, 255, 0, 0))
 
-        // 이미지뷰 컨트롤
-        var r: Boolean = true
-        var g: Boolean = false
-        var b: Boolean = false
-
-        if (r) {
-            for (i in 0..255) {
-                iv.setColorFilter(Color.argb(255, i, 0, 0))
-            }
-            for (i in 0..255) {
-                iv.setColorFilter(Color.argb(255, 255 - i, 0, 0))
-            }
-            r = false
-            g = true
-        }
-        if (g) {
-            for (i in 0..255) {
-                iv.setColorFilter(Color.argb(255, 0, i, 0))
-            }
-            for (i in 0..255) {
-                iv.setColorFilter(Color.argb(255, 0, 255 - i, 0))
-            }
-            g = false
-            b = true
-        }
-        if (b) {
-            for (i in 0..255) {
-                iv.setColorFilter(Color.argb(255, 0, 0, i))
-            }
-            for (i in 0..255) {
-                iv.setColorFilter(Color.argb(255, 0, 0, 255 - i))
-            }
-            b = false
-            r = true
-        }
-
         // Button 가져오기
         val button: Button = findViewById(R.id.loginBtn);
         button.setOnClickListener() {
@@ -68,23 +33,8 @@ class MainActivity : AppCompatActivity() {
             val builder = AlertDialog.Builder(this@MainActivity)
             if (idVal == "CNS2020" && pwVal == "2020") {
                 Toast.makeText(applicationContext, "Login Success", Toast.LENGTH_SHORT).show()
-                /*builder.setTitle("")
-                builder.setMessage("Login Success")
-                builder.setPositiveButton("OK") { dialog, which ->
-                    Toast.makeText(applicationContext, "OK", Toast.LENGTH_SHORT).show()
-
-                }*/
-
-                /*builder.setNegativeButton("NO") {dialog, which ->
-                    Toast.makeText(applicationContext, "NO", Toast.LENGTH_SHORT).show()
-
-                }
-
-                builder.setNeutralButton("Cancel") { _,_->
-                    Toast.makeText(applicationContext, "cancel", Toast.LENGTH_SHORT).show()
-                }*/
-
-
+                val intent : Intent = Intent(this, HomeActivity::class.java)
+                startActivity(intent)
             } else {
                 builder.setTitle("")
                 builder.setMessage("Login Fail")

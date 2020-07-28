@@ -4,4 +4,22 @@
     <string name="pw">PW</string>
     <string name="imgErr">Cannot Find Image!</string>
     <string name="login">LOGIN</string>
+    <string name="ctrlMove">CONTROL MOVE</string>
+    <string name="ctrlMusic">CONTROL MUSIC</string>
+    <string name="welcome">Welcome To CNS World!</string>
+    <string name="detail1">You Can Drive!</string>
+    <string name="detail2">You Can Select Music!</string>
+
+    <string name="go">GO</string>
+    <string name="back">BACK</string>
+    <string name="left">LEFT</string>
+    <string name="right">RIGHT</string>
+    <string name="stop">STOP</string>
+
+    <string name="fast">FAST</string>
+    <string name="slow">SLOW</string>
+
+    <string name="round">ROUND</string>
+
+
 </resources>
