@@ -11,7 +11,7 @@ class HomeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
 
-        val logoutBtn : ImageButton = findViewById(R.id.logoutBtn)
+        val logoutBtn : ImageButton = findViewById(R.id.returnBtn)
         logoutBtn.setOnClickListener {
             val intentLogout : Intent = Intent(this, MainActivity::class.java)
             startActivity(intentLogout)
@@ -23,7 +23,7 @@ class HomeActivity : AppCompatActivity() {
             startActivity(intentMove)
         }
 
-        val ctrlMusicBtn : Button = findViewById(R.id.ctrlMoveBtn)
+        val ctrlMusicBtn : Button = findViewById(R.id.ctrlMusicBtn)
         ctrlMusicBtn.setOnClickListener{
             val intentMusic : Intent = Intent(this, ControlMusicActivity::class.java)
             startActivity(intentMusic)
